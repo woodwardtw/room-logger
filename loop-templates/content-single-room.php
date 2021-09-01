@@ -30,10 +30,26 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php the_content(); ?>
 		<?php echo dlinq_room_system_details();?>
+		
 		<h2>Mic(s)</h2>
 		<ul>
 			<?php dlinq_room_mics();?>
 		</ul>
+
+		<h2>Speaker(s)</h2>
+		<ul>
+			<?php dlinq_room_audio();?>
+		</ul>
+
+		<h2>Additional Hardware</h2>
+		<ul>
+			<?php dlinq_room_hardware();?>
+		</ul>
+
+		<h2>Notes</h2>
+		<?php the_field('general_notes');?>
+
+
 		<?php
 		wp_link_pages(
 			array(

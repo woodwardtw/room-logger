@@ -40,11 +40,23 @@ function dlinq_room_mics(){
 
 function dlinq_room_audio(){
     global $post;
-    $speaker = get_field('speaker', $post->ID);
+    $speakers = get_field('speaker', $post->ID);
+    foreach ($speakers as $key => $speaker) {
+        $term = get_term( $speaker );
+        $speaker_name = $term->name;
+        $speaker_link = get_term_link($speaker);
+        echo "<li><a href='{$speaker_link}'>{$speaker_name}</a></li>";
+    }
 }
 
 function dlinq_room_hardware(){
     global $post;
-    $hardware = get_field('additional_hardware', $post->ID);
+    $hardwares = get_field('additional_hardware', $post->ID);
+     foreach ($hardwares as $key => $hardware) {
+        $term = get_term( $hardware );
+        $hardware_name = $term->name;
+        $hardware_link = get_term_link($hardware);
+        echo "<li><a href='{$hardware_link}'>{$hardware_name}</a></li>";
+    }
 }
 
