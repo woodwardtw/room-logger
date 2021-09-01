@@ -22,14 +22,22 @@ defined( 'ABSPATH' ) || exit;
 	<div class="entry-content">
 
 		<?php the_content(); ?>
-		 <?php acf_form(array(
-        'post_id'       => 'new_post',
-        'new_post'      => array(
-            'post_type'     => 'room',
-            'post_status'   => 'publish'
-        ),
-        'submit_value'  => 'Create new room evaluation'
-    )); ?>
+		 <?php 
+		 if(is_user_logged_in()){
+		 	acf_form(array(
+		        'post_id'       => 'new_post',
+		        'new_post'      => array(
+		            'post_type'     => 'room',
+		            'post_status'   => 'publish'
+		        ),
+		        'submit_value'  => 'Create new room evaluation'
+		    )); 
+		 } else {
+		 	echo '<a class="btn btn-primary" href="' . wp_login_url( get_permalink() ) . '">Login</a>';
+		 }
+		 
+
+    	?>
 
 		<?php
 		wp_link_pages(
