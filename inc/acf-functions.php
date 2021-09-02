@@ -19,7 +19,8 @@ function dlinq_room_system(){
         echo "<li><a href='{$system_link}'>{$system_name}</a></li>";
         }
     } else {
-        echo "<li>None listed</li>";        
+        echo "<li>None listed</li>";
+        
     }
    
 }

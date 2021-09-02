@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 		<div class="entry-meta">
 			<h2>System</h2>
 			<ul class="system-list">
-				<?php dlinq_room_system();?>
+				<?php dlinq_room_system();?>				
 			</ul>
 		</div><!-- .entry-meta -->
 
