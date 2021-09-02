@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="entry-content">
 			<div class="container">
 				<div class="row">			
-					<div class="col-md-4 facet-facets">
+					<div class="col-md-2 facet-facets">
 						<div class="facet-box">
 							<h2>Building</h2>
 							<?php echo facetwp_display( 'facet', 'building');?>	
@@ -41,6 +41,18 @@ defined( 'ABSPATH' ) || exit;
 							</div>
 								<?php echo do_shortcode('[facetwp pager="true"]') ;?>
 								<button class="btn btn-alp btn-dark" value="Reset" onclick="FWP.reset()" class="facet-reset" />Reset Filters</button>							
+					</div>
+					<div class="col-md-2 facet-facets">
+						<div class="facet-box">
+							<h2>System</h2>
+							<?php echo facetwp_display( 'facet', 'system');?>	
+							<h2>Mic(s)</h2>
+							<?php echo facetwp_display( 'facet', 'mics');?>	
+							<h2>Speaker(s)</h2>
+							<?php echo facetwp_display( 'facet', 'speakers' );?>
+							<h2>Additional Hardware</h2>
+							<?php echo facetwp_display( 'facet', 'additional_hardware' );?>
+						</div>	
 					</div>
 				</div>
 			</div>	
